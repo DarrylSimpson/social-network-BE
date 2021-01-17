@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { db } = require('../../models');
 
 const {
     getAllUsers,
@@ -14,7 +13,7 @@ const {
 router
 .route('/')
 .get(getAllUsers)
-.post('createUser');
+.post(createUser);
 
 router
 .route('/:id')
@@ -24,7 +23,7 @@ router
 
 router
 .route('/:userId/friends/:friendId')
-.post(addFriend)
-.delete(deleteFriend);
+.post(addFriend);
+//.delete(deleteFriend);
 
 module.exports = router; 
