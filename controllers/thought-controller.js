@@ -6,25 +6,22 @@ const thoughtController = {
             .populate({
                 path: 'reactions',
                 select: '-__v'
-           })
+            })
             .select('-__v')
             .then(dbThoughts => res.json(dbThoughts))
             .catch(err => res.status(400).json(err))
-            //.catch(err => console.log(err))
     },
-
     getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.id })
-        .populate({
-            path: 'reaction',
-            select: '-__v'
-        })
-        .select('-__v')
-        .then(dbThoughts => res.json(dbThoughts))
-        .catch(err => res.status(400).json(err))
+            .populate({
+                path: 'reactions',
+                select: '-__v'
+            })
+            .select('-__v')
+            .then(dbThoughts => res.json(dbThoughts))
+            .catch(err => res.status(400).json(err))
     },
-
-    createThought({ body }, res) {
+    addThought({ body }, res) {
         Thought.create(body)
             .then(({ _id }) => {
                 return User.findOneAndUpdate(
@@ -42,7 +39,6 @@ const thoughtController = {
             })
             .catch(err => res.json(err))
     },
-
     updateThought({ params, body}, res) {
         Thought.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true})
             .then(dbThought => {
@@ -54,7 +50,6 @@ const thoughtController = {
             })
             .catch(err => res.status(400).json(err))
     },
-
     deleteThought({ params }, res) {
         Thought.findOneAndDelete({ _id: params.id })
             .then(dbThought => {
@@ -66,7 +61,6 @@ const thoughtController = {
             })
             .catch(err => res.status(400).json(err))
     },
-
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
@@ -82,7 +76,6 @@ const thoughtController = {
             })
             .catch(err => res.json(err))
     },
-    
     deleteReaction({ params }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },

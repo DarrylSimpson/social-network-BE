@@ -1,21 +1,42 @@
-# social-network-BE
-<!--  
-# User Story
- 
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
+# social-network-backend
 
-# Acceptance Criteria
+![badge](https://img.shields.io/badge/JavaScript-100%25-blue)
 
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia Core for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia Core
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+  ## Description
+  An API for my social network that uses a NoSQL database so a website can handle large amounts of unstructured data.
 
--->
+
+
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Features](#features)
+  * [Credits](#credits)
+
+  ## Installation
+        
+  Once downloading, install the packages with "npm install" in node. Application will execute on "npm start".
+  
+  ## Usage
+  
+  Videos on how to use the application included here, there are 2
+  
+  https://drive.google.com/file/d/1tX2j3ovt3wyDvO6tcIC7kon5-qTFGUsG/view?usp=sharing 
+  https://drive.google.com/file/d/17fAdWL6BlpCT7BlAI0Vjywa8lOLzquI6/view?usp=sharing
+  
+      
+  ## License
+  MIT
+  <br>
+  [See MIT License](https://choosealicense.com/licenses/mit)
+
+  ## Features
+    
+  A simple to hook up backend for any front end social media websites. 
+
+ ## Credits
+    
+  Contributor: Darryl Simpson  
+  GitHub: https://github.com/DarrylSimpson
